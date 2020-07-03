@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+		http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>sp5</groupId>
+  <!-- 프로젝트의 식별자. 여기서는 프로젝트 폴더와 동일한 이름을 사용 -->
+	<artifactId>sp5-chap02</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<!-- spring contect module의 5.0.2 버전의 의존성을 추가
+	의존성을 추가하는 것은 자바 애플이케이션에서 클래스 패스에 spring-context 모듈을 추가한다는 의미.
+	즉, 위 설정은 메이븐 프로젝트의 소스코드를 컴파일하고 jar를 만들 때 사용할 클래스 패스에
+	spring-context-5.0.2.RELEASE.jar 파일을 추가한다는 의미.
+	-->
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>5.0.2.RELEASE</version>
+		</dependency>
+	</dependencies>
+	<!-- maven 1.8 버전을 기준으로 자바 소스를 컴파일하고 결과 클래스를 생성.
+	여기서의 버전은 maven 버전과를 다른 maven-compiler-plugin의 버전. 
+	자바 컴파일러가 소스코드를 읽을 때 UTF-8 인코딩 사용. -->
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.7.0</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+					<encoding>utf-8</encoding>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
+
+<!--  
+	maven 프로젝트는 root에 pom.xml을 갖는다. maven 프로젝트에 대한 설정 정보를 관리하는 파일.
+	메이븐은 한 개의 모듈을 아티팩트라는 단위로 관리.
+
+ -->
