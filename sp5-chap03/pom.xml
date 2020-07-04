@@ -6,7 +6,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>sp5</groupId>
   <!-- 프로젝트의 식별자. 여기서는 프로젝트 폴더와 동일한 이름을 사용 -->
-	<artifactId>nj-sp5-chap02</artifactId>
+	<artifactId>nj-sp5-chap03</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
 	<!-- spring contect module의 5.0.2 버전의 의존성을 추가
