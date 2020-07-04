@@ -3,9 +3,9 @@ package spring;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class MemberInfoPrinter {
-	@Autowired
+//	@Autowired
 	private MemberDao memDao;
-	@Autowired
+//	@Autowired
 	private MemberPrinter printer;
 
 	public void printMemberInfo(String email) {
@@ -18,10 +18,12 @@ public class MemberInfoPrinter {
 		System.out.println();
 	}
 
+	@Autowired
 	public void setMemberDao(MemberDao memberDao) {
 		this.memDao = memberDao;
 	}
 
+	@Autowired
 	public void setPrinter(MemberPrinter printer) {
 		this.printer = printer;
 	}
