@@ -8,6 +8,7 @@ public class Client implements InitializingBean, DisposableBean {
 	private String host;
 
 	public void setHost(String host) {
+		System.out.println("setHost");
 		this.host = host;
 	}
 
