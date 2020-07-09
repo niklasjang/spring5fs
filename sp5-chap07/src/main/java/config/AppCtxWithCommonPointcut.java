@@ -15,25 +15,25 @@ import chap07.RecCalculator;
 @EnableAspectJAutoProxy
 public class AppCtxWithCommonPointcut {
 	
-	@Bean
-	public CacheAspect cacheAspect() {
-		return new CacheAspect();
-	}
-
-	@Bean
-	public ExeTimeAspect exeTimeAspect() {
-		return new ExeTimeAspect();
-	}
-	
 //	@Bean
-//	public CacheAspect2 cacheAspect() {
-//		return new CacheAspect1();
+//	public CacheAspect cacheAspect() {
+//		return new CacheAspect();
 //	}
 //
 //	@Bean
-//	public ExeTimeAspect2 exeTimeAspect() {
-//		return new ExeTimeAspect2();
+//	public ExeTimeAspect exeTimeAspect() {
+//		return new ExeTimeAspect();
 //	}
+//	
+	@Bean
+	public CacheAspect2 cacheAspect() {
+		return new CacheAspect2();
+	}
+
+	@Bean
+	public ExeTimeAspect2 exeTimeAspect() {
+		return new ExeTimeAspect2();
+	}
 
 	@Bean
 	public Calculator calculator() {
