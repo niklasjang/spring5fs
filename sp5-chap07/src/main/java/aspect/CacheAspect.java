@@ -7,9 +7,9 @@ import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
-
+import org.springframework.core.annotation.Order;
 @Aspect
-//@Order(2)
+@Order(2)
 public class CacheAspect {
 
 	private Map<Long, Object> cache = new HashMap<>();

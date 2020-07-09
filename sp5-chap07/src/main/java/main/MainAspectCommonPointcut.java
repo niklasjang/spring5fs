@@ -10,12 +10,12 @@ public class MainAspectCommonPointcut {
 	public static void main(String[] args) {
 		AnnotationConfigApplicationContext ctx = 
 				new AnnotationConfigApplicationContext(AppCtxWithCommonPointcut.class);
-
 		Calculator cal = ctx.getBean("calculator", Calculator.class);
+		System.out.println("hello");
 		cal.factorial(7);
 		cal.factorial(7);
-		cal.factorial(5);
-		cal.factorial(5);
+//		cal.factorial(5);
+//		cal.factorial(5);
 		ctx.close();
 	}
 
