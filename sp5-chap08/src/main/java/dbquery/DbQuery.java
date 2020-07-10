@@ -17,7 +17,7 @@ public class DbQuery {
 	public int count() {
 		Connection conn = null;
 		try {
-			conn = dataSource.getConnection();
+			conn = dataSource.getConnection(); //풀에서 커넥션을 구함. 커넥션을 활성 상태가 된다. 
 			try (Statement stmt = conn.createStatement();
 					ResultSet rs = stmt.executeQuery("select count(*) from MEMBER")) {
 				rs.next();
@@ -28,7 +28,7 @@ public class DbQuery {
 		} finally {
 			if (conn != null)
 				try {
-					conn.close();
+					conn.close(); //커넥션을 종료. 커넥션은 유휴상택 된다. 
 				} catch (SQLException e) {
 				}
 		}
