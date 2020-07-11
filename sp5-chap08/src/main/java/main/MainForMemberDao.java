@@ -38,7 +38,8 @@ public class MainForMemberDao {
 
 	private static void updateMember() {
 		System.out.println("----- updateMember");
-		Member member = memberDao.selectByEmail("madvirus@madvirus.net");
+		//mysql에 이미 존재하는 row의 email이어야 한다. 
+		Member member = memberDao.selectByEmail("niklasjang@gmail.com");
 		String oldPw = member.getPassword();
 		String newPw = Double.toHexString(Math.random());
 		member.changePassword(oldPw, newPw);
@@ -59,5 +60,4 @@ public class MainForMemberDao {
 		memberDao.insert(member);
 		System.out.println(member.getId() + " 데이터 추가");
 	}
-
 }
